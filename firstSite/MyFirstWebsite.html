@@ -4,11 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Новостное агенство</title>
-	<link rel="icon" href="img/icon.png" type="image/png" sizes="32x32">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="jquery-3.6.4.min.js"></script>
+	<script src="scripts.js"></script>
 </head>
 <body>
-	<header>		<div id="top-bar">
+	<header>		
+		<div id="top-bar">
 			<div class="fixed-conteiner">
 				Самые <a id="header-link" href="#">свежие новости</a> в реальном времени
 				<div id="data-time">12:30 14.04.2023</div>
@@ -16,17 +25,18 @@
 		</div>
 		<div id="header">
 			<div class="fixed-conteiner">
+				<img id="menujs" src="img/menujs.png">
 				<img id="logo" src="img/logo.png">
 				<div class="header-props">
 					<div class="header-text">14 апреля, пятница</div>
 					<div class="header-time">12:30</div>
 					<div class="header-weather">+14 &degC</div>
-					<input class="header-search" type="search" name="search" placeholder="Поиск по сайту">
+					<input class="header-search" type="text" name="search" placeholder="Поиск по сайту">
 				</div>	
 			</div>
 		</div>
 		<div id="menu-container">
-			<nav  class="fixed-conteiner">
+			<nav  class="menu-fixed-conteiner">
 	  			<ul>
 	    			<li><a class="menu-nav" href="#">Главная</a></li>
 	    			<li><a class="menu-nav" href="#">Политика</a></li>
@@ -43,7 +53,7 @@
 	</header>
 	<main>
 		<div id="central-conteiner">
-			<div class="fixed-conteiner">
+			<div class="fixed-conteiner" id="flex-container">
 				<div id="column-left">
 					<h2>Новости дня</h2>
 					<div class="news-item">
@@ -113,8 +123,15 @@
 						<div class="news-item-props">
 							<a href="#">/НВ по войне</a>
 							<div class="news-time">15:37</div>
-							<div class="news-coments-count">137</div>
+							<div class="news-coments-count">37</div>
 						</div>
+					</div>
+					<div id="exchange-rates">
+						<div id="rates">
+							Курсы валют:
+						</div>
+						<div id="eur">EUR:&nbsp;&nbsp;<div id="cost-eur"></div></div>
+						<div id="usd">USD:&nbsp;&nbsp;<div id="cost-usd"></div></div>
 					</div>
 				</div>
 				<div id="column-center">
@@ -299,9 +316,10 @@
 	    			<p><a href="#">Общество</a></p>
 				</div>
 				<div class="contacts">
-					<img src="img/footer-contact1.png">
-					<img src="img/footer-contact2.png">
-					<img src="img/footer-contact3.png">
+					<a href="https://www.instagram.com/"> <img src="img/footer-contact1.png"></a>
+					<a href="https://ru.wikipedia.org/wiki/Telegram"> <img src="img/footer-contact2.png"></a>
+					<a href="https://twitter.com/"> <img src="img/footer-contact3.png"></a>
+					<a href="https://www.youtube.com/"> <img src="img/footer-contact4.png"></a>
 					<div class="phone-num"> +380 (044) 593-39-39</div>
 					<div class="footer-email"> news@rbc.ua</div>
 				</div>
